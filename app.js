@@ -1,12 +1,22 @@
 const postCardContainer = document.getElementById('post-card-container');
 const markDiv = document.getElementById('markDiv')
+const loadingSpinner = document.getElementById('loading-spinner');
 let bg;
 
 
 const dataLoad = async () => {
+
+
+    loadingSpinner.classList.remove('hidden')
+
+    setTimeout(() => {
+        loadingSpinner.classList.add('hidden')
+    }, 2000);
+
     const res = await fetch(' https://openapi.programming-hero.com/api/retro-forum/posts');
     const data = await res.json();
     const posts = data.posts;
+
 
     // postCardContainer.innerHTML = '';
     posts.forEach(post => {
