@@ -21,7 +21,7 @@ const dataLoad = async () => {
         }
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card flex flex-row text-start p-10 gap-6 hover:bg-[#797DFC1A] border duration-300 hover:border-[#797DFC] bg-[#F3F3F5]">
+        <div class="card flex md:flex-row flex-col text-start p-10 gap-6 hover:bg-[#797DFC1A] border duration-300 hover:border-[#797DFC] bg-[#F3F3F5]">
                                 <div class="w-20 relative">
                                 <img class="rounded-2xl w-full" src="${post.image}" alt="">
                                 <div class="w-4 h-4 bg-[${bg}] rounded-full absolute top-[-5px] right-[-5px]">
@@ -40,7 +40,7 @@ const dataLoad = async () => {
                                 </p>
                                 <hr>
                                 <div class="flex justify-between">
-                                    <ul class="flex gap-6 text-[#12132D99]">
+                                    <ul class="flex md:gap-6 gap-3 text-[#12132D99]">
                                         <li class="flex gap-3 items-center">
                                             <i class="fa-regular fa-message"></i>
                                             <span>${post.comment_count}</span>
@@ -70,16 +70,19 @@ const dataLoad = async () => {
 dataLoad();
 
 
+let markCount = 0;
+
 const markAsRead = (postTitle, view) => {
 
-
+    markCount++;
+    document.getElementById('markCount').innerText = `(${markCount})`;
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="p-4 flex gap-6 text-start bg-white rounded-2xl">
+    <div class="p-4 flex gap-6 text-start bg-white rounded-2xl justify-between">
                                 <h2 class="text-[#12132D] font-semibold ">
                                     ${postTitle}
                                 </h2>
-                                <div class="flex items-center gap-2 text-[#12132D99]">
+                                <div class="flex items-center  gap-2 text-[#12132D99]">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>${view}</span>
                                 </div>

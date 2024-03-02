@@ -32,20 +32,20 @@
             </h1>
             <div class="flex items-center gap-6">
                 <ul class="gap-3 hidden md:flex">
-                    <li title="Home"
-                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                    <li data-tip="Home"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
                         <i class="fa-solid fa-house"></i>
                     </li>
-                    <li title="Tooltip"
-                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                    <li data-tip="Post"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
                         <i class="fa-solid fa-pencil"></i>
                     </li>
-                    <li title="Account"
-                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                    <li data-tip="Account"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
                         <i class="fa-solid fa-user-plus"></i>
                     </li>
-                    <li title="Region"
-                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                    <li data-tip="Region"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
                         <i class="fa-regular fa-flag"></i>
                     </li>
                 </ul>
@@ -72,9 +72,10 @@
                 <p class="text-[#FFFFFFCC] font-medium text-[20px]">
                     Share your favorite opinion and win and wp forum coffee mug!
                 </p>
-                <div class="flex flex-col md:flex-row rounded-full max-w-[400px] md:bg-white">
-                    <input class="rounded-full p-5 flex-1" type="text" name="" placeholder="Search here anything" id="">
-                    <button class=" m-2 px-8 py-4 bg-[#797DFC] rounded-full text-white font-bold">
+                <div class="flex rounded-full justify-between w-full md:max-w-[400px] bg-white">
+                    <input class="px-2 md:px-6 outline-none rounded-full max-w-[175px] md:max-w-full flex-1" type="text" name=""
+                        placeholder="Search here anything" id="">
+                    <button class=" m-2 md:px-8 px-2  md:py-4 bg-[#797DFC]  rounded-full text-white font-bold">
                         Search
                     </button>
                 </div>
@@ -111,22 +112,22 @@
                     features allow for a streamlined .
                 </p>
 
-                <div class="flex gap-6">
-                    <div id="post-card-container" class="flex flex-col gap-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div id="post-card-container" class="flex flex-1 flex-col gap-6">
 
                     </div>
-                    <div class="p-6 space-y-6 bg-[#12132D0D] rounded-3xl h-fit">
-                        <div class="flex justify-between gap-20 items-center">
+                    <div class="p-6 space-y-6 bg-[#12132D0D] rounded-3xl h-fit md:w-[374px]">
+                        <div class="flex justify-between gap-20 items-center ">
                             <h1 class="text-[#12132D] font-bold text-[20px]">
                                 Title
                             </h1>
                             <h3>
                                 <i class="text-[#3DCE09] fa-solid fa-check-double"></i>
-                                <span class="text-[#12132D99]">Mark as read (4)</span>
+                                <span class="text-[#12132D99]">Mark as read <span id="markCount">(0)</span></span>
                             </h3>
                         </div>
                         <div id="markDiv" class="flex flex-col gap-4">
-                            
+
                         </div>
                     </div>
                 </div>
