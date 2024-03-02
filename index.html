@@ -26,18 +26,27 @@
 
     <header>
         <nav class="w-11/12 md:w-4/5 mx-auto flex py-6 md:py-14 justify-between items-center">
-            
+
             <h1 class="text-[20px] md:text-[35px] font-black text-[#12132D]">
                 ReTro
             </h1>
             <div class="flex items-center gap-6">
                 <ul class="gap-3 hidden md:flex">
-                    <li title="Home" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-house"></i></li>
-                    <li title="Tooltip" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-pencil"></i></li>
-                    <li title="Account" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-user-plus"></i></li>
-                    <li title="Region" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-regular fa-flag"></i></li>
+                    <li title="Home"
+                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-house"></i></li>
+                    <li title="Tooltip"
+                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-pencil"></i></li>
+                    <li title="Account"
+                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-user-plus"></i></li>
+                    <li title="Region"
+                        class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-regular fa-flag"></i></li>
                 </ul>
-                <button class="md:py-4 md:px-10 px-4 py-2 rounded-full bg-[#797DFC] text-white font-bold md:text-[20px] text-[16px] hover:bg-[#666ae799] duration-300">
+                <button
+                    class="md:py-4 md:px-10 px-4 py-2 rounded-full bg-[#797DFC] text-white font-bold md:text-[20px] text-[16px] hover:bg-[#666ae799] duration-300">
                     Sign In
                 </button>
             </div>
@@ -45,6 +54,45 @@
     </header>
 
     <main>
+
+
+        <!-- banner section -->
+        <section class="w-11/12 md:w-4/5 mx-auto bg-[url('./images/bgbanner.png')] bg-bottom bg-no-repeat bg-contain  flex flex-col md:flex-row bg-[#12132D] p-4 gap-6 md:p-24 rounded-3xl items-center mb-6 md:mb-12">
+            <div class="md:flex-1 w-[100%] md:w-fit space-y-5 p-6">
+                <h1 class="text-[32px] md:text-[64px] font-black text-white">
+                    Welcome to the <br><span
+                        class="bg-gradient-to-r from-purple-500 via-blue-300 to-black text-transparent bg-clip-text">ReTro</span>
+                    Forum
+                </h1>
+                <p class="text-[#FFFFFFCC] font-medium text-[20px]">
+                    Share your favorite opinion and win and wp forum coffee mug!
+                </p>
+                <div class="flex flex-col md:flex-row rounded-full max-w-[400px] md:bg-white">
+                    <input class="rounded-full p-5 flex-1" type="text" name="" placeholder="Search here anything" id="">
+                    <button class=" m-2 px-8 py-4 bg-[#797DFC] rounded-full text-white font-bold">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-12 bg-white text-[#12132DCC] text-[24px] rounded-2xl h-fit ">
+                <ul class="flex flex-col gap-4">
+                    <li class="flex text-[24px] justify-between gap-14">
+                        <p>Registered Users</p> <span>01</span>
+                    </li>
+                    <li class="flex text-[24px] justify-between gap-14">
+                        <p>Forum</p> <span>05</span>
+                    </li>
+                    <li class="flex text-[24px] justify-between gap-14">
+                        <p>Topics</p> <span>03</span>
+                    </li>
+                    <li class="flex text-[24px] justify-between gap-14">
+                        <p>Replies</p> <span>01</span>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
 
     </main>
 
