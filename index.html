@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-6</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
             font-family: "Mulish", sans-serif;
@@ -20,7 +25,23 @@
 <body>
 
     <header>
-
+        <nav class="w-11/12 md:w-4/5 mx-auto flex py-6 md:py-14 justify-between items-center">
+            
+            <h1 class="text-[20px] md:text-[35px] font-black text-[#12132D]">
+                ReTro
+            </h1>
+            <div class="flex items-center gap-6">
+                <ul class="gap-3 hidden md:flex">
+                    <li title="Home" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-house"></i></li>
+                    <li title="Tooltip" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-pencil"></i></li>
+                    <li title="Account" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-solid fa-user-plus"></i></li>
+                    <li title="Region" class="h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]"><i class="fa-regular fa-flag"></i></li>
+                </ul>
+                <button class="md:py-4 md:px-10 px-4 py-2 rounded-full bg-[#797DFC] text-white font-bold md:text-[20px] text-[16px] hover:bg-[#666ae799] duration-300">
+                    Sign In
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main>
