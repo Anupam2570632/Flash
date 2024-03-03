@@ -73,9 +73,11 @@
                     Share your favorite opinion and win and wp forum coffee mug!
                 </p>
                 <div class="flex rounded-full justify-between w-full md:max-w-[400px] bg-white">
-                    <input class="px-2 md:px-6 outline-none rounded-full max-w-[175px] md:max-w-full flex-1" type="text"
+                    <input id="categoryInput"
+                        class="px-2 md:px-6 outline-none rounded-full max-w-[175px] md:max-w-full flex-1" type="text"
                         name="" placeholder="Search here anything" id="">
-                    <button class=" m-2 md:px-8 px-2  md:py-4 bg-[#797DFC]  rounded-full text-white font-bold">
+                    <button onclick="showDataCategory()"
+                        class=" m-2 md:px-8 px-2 py-2  md:py-4 bg-[#797DFC]  rounded-full text-white font-bold">
                         Search
                     </button>
                 </div>
@@ -169,8 +171,9 @@
                     Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined .
                 </p>
+
                 <div id="latestPost" class="grid py-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                    
+
                 </div>
             </div>
         </section>
@@ -180,8 +183,8 @@
 
 
     <!-- footer starts here -->
-    <footer class="bg-[#12132D0D] mt-24">
-        <div class="w-11/12 md:w-4/5 mx-auto md:py-24 py-10 flex flex-col items-center justify-center gap-6">
+    <footer class="bg-[#12132D0D] mt-10 md:mt-24">
+        <div class="w-11/12 md:w-4/5 mx-auto md:py-24 py-10 flex flex-col items-center justify-center md:gap-6 gap-4">
             <h1 class="text-[36px] font-black text-[#12132D]">
                 ReTro
             </h1>
