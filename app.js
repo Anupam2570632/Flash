@@ -1,6 +1,8 @@
 const postCardContainer = document.getElementById('post-card-container');
 const markDiv = document.getElementById('markDiv')
 const loadingSpinner = document.getElementById('loading-spinner');
+const latestPostContainer = document.getElementById('latestPost');
+
 let bg;
 
 
@@ -100,3 +102,55 @@ const markAsRead = (postTitle, view) => {
         `
     markDiv.appendChild(div);
 }
+
+
+const loadLatestPost = async () => {
+    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+    const data = await res.json();
+
+    data.forEach(post => {
+        const div = document.createElement('div');
+
+        let date = post.author.posted_date;
+        let designation = post.author.designation;
+        designation = designation? post.author.designation:"Unknown"
+        date = date ? post.author.posted_date : "No publish date";
+    
+        div.innerHTML = `
+        <div class="flex border border-[#12132D26] flex-col text-start p-6 bg-white rounded-3xl gap-6">
+                        <img class="rounded-2xl" src="${post.cover_image}" alt="">
+                        <div class="space-y-4">
+                            <h2 class="text-[#12132D99] flex gap-2 items-center">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span>
+                                    ${date}
+                                </span>
+                            </h2>
+                            <h1 class="text-[#12132D] font-extrabold text-[18px]">
+                                ${post.title}
+                            </h1>
+                            <p class="text-[#12132D99]">
+                            ${post.description.slice(0, 80)}
+                            </p>
+                            <div class="flex gap-4 items-center">
+                                <img class="w-12 h-12 rounded-full"
+                                    src="${post.profile_image}" alt="">
+                                <div class="flex flex-col gap-1">
+                                    <h1 class="text-[#12132D] font-bold">
+                                        ${post.author.name}
+                                    </h1>
+                                    <p class="text-[14px] text-[#12132D99]">
+                                        ${designation}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        `
+        latestPostContainer.appendChild(div);
+    })
+}
+
+
+
+loadLatestPost();
