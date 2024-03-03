@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -22,10 +22,37 @@
     </style>
 </head>
 
-<body>
+<body class="max-w-[1500px] mx-auto">
 
-    <header class="container mx-auto">
+    <header>
         <nav class="w-11/12 md:w-4/5 mx-auto flex py-6 md:py-14 justify-between items-center">
+            <div class="dropdown flex md:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-white rounded-xl space-y-3">
+                    <li data-tip="Home"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
+                    <li data-tip="Post"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-pencil"></i>
+                    </li>
+                    <li data-tip="Account"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </li>
+                    <li data-tip="Region"
+                        class="tooltip h-14 w-14 rounded-full border border-[#0307121A] bg-[#12132D08] flex items-center justify-center text-[24px] text-[#12132D99] hover:cursor-pointer hover:bg-[#12132D30]">
+                        <i class="fa-regular fa-flag"></i>
+                    </li>
+                </ul>
+            </div>
 
             <h1 class="text-[20px] md:text-[35px] font-black text-[#12132D]">
                 ReTro
@@ -55,9 +82,10 @@
                 </button>
             </div>
         </nav>
+
     </header>
 
-    <main class="container mx-auto">
+    <main>
 
 
         <!-- banner section -->
@@ -70,7 +98,7 @@
                     Forum
                 </h1>
                 <p class="text-[#FFFFFFCC] font-medium text-[20px]">
-                    Share your favorite opinion and win and wp forum coffee mug!
+                    Retro Forum: Nostalgic vibes, timeless discussions, vintage memories reborn online!
                 </p>
                 <div class="flex rounded-full justify-between w-full md:max-w-[400px] bg-white">
                     <input id="categoryInput"
@@ -104,14 +132,14 @@
 
 
         <!-- discuss section -->
-        <section class="container mx-auto">
+        <section>
             <div class="w-11/12 my-16 space-y-6 md:w-4/5 mx-auto text-center">
                 <h1 class="text-[28px] text-[#12132D] font-black md:text-[40px]">
                     Let’s Discuss
                 </h1>
                 <p class="max-w-[650px] text-[18px] text-[#12132D99] mx-auto text-cent">
-                    Yes, you can run unit tests and view the results directly within the app. The integrated testing
-                    features allow for a streamlined .
+                    Join Retro Forum, a vibrant online community celebrating nostalgia. Dive into discussions on vintage
+                    culture, games, music, and more!
                 </p>
 
                 <span id="loading-spinner" class="hidden loading loading-ring loading-lg w-20"></span>
@@ -140,7 +168,7 @@
 
 
         <!-- forum section -->
-        <section class="container mx-auto">
+        <section>
             <div
                 class="bg-[#12132D] w-11/12 md:w-4/5 mx-auto p-6 gap-6 flex flex-col md:flex-row space-y-10 justify-center items-center rounded-3xl">
                 <div class="flex-1 md:p-20 text-white space-y-6">
@@ -148,8 +176,8 @@
                         Join Our Forum
                     </h1>
                     <p class="text-[18px] font-medium text-[#FFFFFFCC]">
-                        Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and
-                        view the results directly within the app.
+                        Step into nostalgia at Retro Forum! Connect with enthusiasts, share memories, and discuss
+                        classic gems in our vibrant vintage community.
                     </p>
                     <button class="py-4 px-10 rounded-full text-white text-[20px] font-bold bg-[#797DFC]">
                         Registered Now
@@ -162,14 +190,14 @@
         </section>
 
         <!-- latest posts section -->
-        <section class="container mx-auto">
+        <section>
             <div class="w-11/12 md:w-4/5 mx-auto text-center space-y-6 pt-20">
                 <h1 class="text-[#12132D] text-[28px] md:text-[40px] font-black">
                     Latest Posts
                 </h1>
                 <p class="max-w-[670px] mx-auto text-center text-[#12132D99] text-[18px]">
-                    Yes, you can run unit tests and view the results directly within the app. The integrated testing
-                    features allow for a streamlined .
+                    Explore the pulse of nostalgia with Retro Forum's Latest Posts section, where vintage enthusiasts
+                    share memories, insights, and timeless classics.
                 </p>
 
                 <div id="latestPost" class="grid py-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -190,8 +218,8 @@
                 ReTro
             </h1>
             <p class="text-[#12132DB2] max-w-[700px] text-center">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC
+                Explore nostalgic conversations and vintage vibes at Retro Forum, your online haven for classic memories
+                and timeless discussions. Join us!
             </p>
             <ul class="flex text-[24px] gap-6">
                 <li class="hover:cursor-pointer">

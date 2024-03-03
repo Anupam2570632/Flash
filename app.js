@@ -100,11 +100,6 @@ const markAsRead = (postTitle, view) => {
 }
 
 const loadLatestPost = async () => {
-    loadingSpinner.classList.remove('hidden')
-
-    setTimeout(() => {
-        loadingSpinner.classList.add('hidden')
-    }, 2000);
 
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await res.json();
@@ -131,7 +126,7 @@ const loadLatestPost = async () => {
                                 ${post.title}
                             </h1>
                             <p class="text-[#12132D99]">
-                            ${post.description.slice(0, 80)}
+                            ${post.description.slice(0, 60)}
                             </p>
                             <div class="flex gap-4 items-center">
                                 <img class="w-12 h-12 rounded-full"
